@@ -1,0 +1,138 @@
+GIT
+  remote: git://github.com/pprince/bluesy-noise.git
+  revision: f11c8ae2e094cf614660a006becf5c667bfd626a
+  branch: ppdevel
+  specs:
+    bluesy-noise (0.5.0)
+      chunky_png
+      compass
+      rubystats
+
+GIT
+  remote: git://github.com/pprince/compass.git
+  revision: 23fd95dae588f99c1fa3e6ce8978d33af148c2b2
+  branch: gemspec_ruby_listen
+  specs:
+    compass (1.0.0.alpha.19)
+      chunky_png (~> 1.2)
+      compass-core (~> 1.0.0.alpha.19)
+      compass-import-once (~> 1.0.3)
+      json
+      listen (~> 1.1)
+      sass (>= 3.3.0, < 3.5)
+    compass-core (1.0.0.alpha.19)
+      multi_json (~> 1.0)
+      sass (>= 3.3.0, < 3.5)
+
+GIT
+  remote: git://github.com/pprince/jekyll-pandoc-multiple-formats.git
+  revision: a3cd9e293909c75a76e1611f250316f71584b074
+  branch: ppdevel
+  specs:
+    jekyll-pandoc-multiple-formats (0.0.6)
+      jekyll
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    bindata (2.0.0)
+    blankslate (2.1.2.4)
+    breakpoint (2.4.2)
+      sass (~> 3.3.0)
+      sassy-maps (< 1.0.0)
+    chunky_png (1.3.0)
+    classifier (1.3.4)
+      fast-stemmer (>= 1.0.0)
+    colorator (0.1)
+    commander (4.1.6)
+      highline (~> 1.6.11)
+    compass-import-once (1.0.4)
+      sass (>= 3.2, < 3.5)
+    fast-stemmer (1.0.2)
+    ffi (1.9.3)
+    hashie (2.0.5)
+    highline (1.6.21)
+    hoe (3.10.0)
+      rake (>= 0.8, < 11.0)
+    jekyll (1.5.0)
+      classifier (~> 1.3)
+      colorator (~> 0.1)
+      commander (~> 4.1.3)
+      liquid (~> 2.5.5)
+      listen (~> 1.3)
+      maruku (= 0.7.0)
+      pygments.rb (~> 0.5.0)
+      redcarpet (~> 2.3.0)
+      safe_yaml (~> 1.0)
+      toml (~> 0.1.0)
+    json (1.8.1)
+    liquid (2.5.5)
+    listen (1.3.1)
+      rb-fsevent (>= 0.9.3)
+      rb-inotify (>= 0.9)
+      rb-kqueue (>= 0.2)
+    maruku (0.7.0)
+    multi_json (1.9.2)
+    oily_png (1.1.1)
+      chunky_png (~> 1.3.0)
+    parslet (1.5.0)
+      blankslate (~> 2.0)
+    posix-spawn (0.3.8)
+    psd (2.1.2)
+      bindata
+      chunky_png
+      psd-enginedata (~> 1.0)
+      rake
+    psd-enginedata (1.0.0)
+      hashie (~> 2.0)
+    pygments.rb (0.5.4)
+      posix-spawn (~> 0.3.6)
+      yajl-ruby (~> 1.1.0)
+    rake (10.2.2)
+    rb-fsevent (0.9.4)
+    rb-inotify (0.9.3)
+      ffi (>= 0.5.0)
+    rb-kqueue (0.2.2)
+      ffi (>= 0.5.0)
+    redcarpet (2.3.0)
+    rubystats (0.2.3)
+      hoe (>= 1.7.0)
+    safe_yaml (1.0.1)
+    sass (3.3.4)
+    sass-globbing (1.1.0)
+      sass (>= 3.1)
+    sassy-buttons (0.2.6)
+      compass (>= 0.12.2)
+    sassy-maps (0.3.2)
+      compass (~> 1.0.0.alpha.13)
+      sass (~> 3.3.0.rc.2)
+    sassy_noise (0.1.5)
+      chunky_png
+      compass
+    scut (0.10.2)
+      sass (~> 3.2, >= 3.2.0)
+    susy (2.1.1)
+      sass (~> 3.3.0)
+    toml (0.1.1)
+      parslet (~> 1.5.0)
+    yajl-ruby (1.1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bluesy-noise!
+  breakpoint (~> 2.4)
+  chunky_png (~> 1.3.0)
+  compass!
+  compass-import-once (~> 1.0.4)
+  jekyll (= 1.5.0)
+  jekyll-pandoc-multiple-formats!
+  oily_png (~> 1.1.1)
+  psd (~> 2.1.2)
+  sass (~> 3.3.4)
+  sass-globbing (~> 1.1.0)
+  sassy-buttons
+  sassy_noise
+  scut
+  susy (~> 2.1.1)

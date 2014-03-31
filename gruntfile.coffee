@@ -316,7 +316,7 @@ module.exports = (grunt) ->
         files: ['BUILD/production/OUTPUT/**/*']
         tasks: ['notify:reload']
         options:
-          livereload: 3030
+          livereload: 2020
 
     connect:
       options:

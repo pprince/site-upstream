@@ -32,8 +32,7 @@
         @include span(full nest);
     }
 
-    #{$selector-main-content},
-    #{$selector-page-sidebar} {
+    #{$selector-main-content} {
         @include span(full);
         @include margin-trailer;
         padding: $base-line-height/2 $base-line-height;
@@ -72,14 +71,7 @@
     // ------
 
     // e.g., smaller desktops, larger tablets
-    // TWO COLUMNS
     @include breakpoint ($breakpoint-medium) {
-        #{$selector-main-content} {
-            @include span(first 8);
-        }
-        #{$selector-page-sidebar} {
-            @include span(last 4);
-        }
         body {
             @include padding-h($base-line-height);
         }

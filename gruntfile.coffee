@@ -311,18 +311,18 @@ module.exports = (grunt) ->
         files: ['BUILD/development/OUTPUT/**/*']
         tasks: ['notify:reload']
         options:
-          livereload: 2020
+          livereload: 5050
       lr_prod:
         files: ['BUILD/production/OUTPUT/**/*']
         tasks: ['notify:reload']
         options:
-          livereload: 2020
+          livereload: 5050
 
     connect:
       options:
         hostname: '*' # listen on all interfaces, not just 127.0.0.1
-        port: 2000
-        livereload: 2020
+        port: 5000
+        livereload: 5050
       dev:
         options:
           base: 'BUILD/development/OUTPUT'

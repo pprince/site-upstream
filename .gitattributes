@@ -1,0 +1,9 @@
+*     eol=lf
+*.jar binary
+*.eot binary
+*.svg binary
+*.ttf binary
+*.woff binary
+*.png binary
+*.jpg binary
+*.eps binary

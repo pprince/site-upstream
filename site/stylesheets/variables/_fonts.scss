@@ -1,0 +1,13 @@
+// Fonts
+// -----
+
+$default-font-face:             'Open Sans', 'Helvetica', 'Arial', sans-serif;
+$default-banner-font-face:      $default-font-face;
+$default-heading-font-face:     $default-font-face;
+$default-monospace-font-face:   'Inconsolata', monospace;
+
+// What to load from Google Fonts:
+$google-fonts-uri: '/css?family=Open+Sans:400,400italic,700,700italic|Inconsolata:400,700';
+
+// Note: Google Web Fonts faces will not actually be available unless they are
+// loaded from somewhere (e.g., `main.scss`).

@@ -1,0 +1,19 @@
+html {
+    min-height: 100%;
+    @include background-with-css2-fallback(
+        url($base-noise-005),
+        linear-gradient(to top right,
+            shade($base-color, 25%),
+            shade(adjust-hue($base-color, 270), 25%)
+        ) no-repeat fixed,
+        darken($base-color, 20%)
+    );
+}
+
+#{$selector-page-middle} {
+    @include alpha-me(background-color, rgba(black, 0.25), $base-color);
+}
+
+#{$selector-main-content} {
+    @include alpha-me(background-color, rgba(black, 0.50), $base-color);
+}

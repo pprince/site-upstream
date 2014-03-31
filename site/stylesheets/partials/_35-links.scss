@@ -1,0 +1,52 @@
+// Links
+// =====
+
+
+// Global, Basic Link Styles
+// -------------------------
+//
+// *Order matters* for the hyperlink pseudo-classes.
+// Also, ensure that you consider all three means of navigating links:
+//   - Mouse (click, hover)
+//   - Touch (no hover)
+//   - Keyboard (focus)
+a {
+    &:link,
+    &:visited {
+        color: $link-color;
+        text-decoration: none;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: scale-brightness($link-color, 65%);
+        text-decoration: underline;
+    }
+
+    &:active {
+        position: relative;
+        top: 1px;
+        left: 1px;
+    }
+}
+
+// De-Styling Links to the Same/Current Page
+// -----------------------------------------
+//
+// A class to make links to the current page not look like links.
+a.current {
+    @include unstyled-link;
+    cursor: default;
+}
+// This is the pure-CSS/static-site solution to something that would usually be
+// handled by dynamic server-side code, or, failing that, javascript.
+
+h1 > a:first-child,
+h2 > a:first-child,
+h3 > a:first-child,
+h4 > a:first-child,
+h5 > a:first-child,
+h6 > a:first-child {
+    @include unstyled-link;
+}

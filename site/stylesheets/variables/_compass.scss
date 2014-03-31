@@ -1,0 +1,24 @@
+// Compass
+// -------
+
+// ### Vertical Rhythms ###
+// a.k.a. "Baseline Grid", "vertical grid"
+$base-font-size:        16px; // 16px is kindof a magic number; don't change it. FIXME: explaination.
+$base-line-height:      24px;
+$rhythm-unit:           "rem";
+$rem-with-px-fallback:  true;
+
+// ### border-radius() mixin ###
+$default-border-radius: $base-line-height/2;
+
+// ### box-shadow() mixin ###
+$default-box-shadow-blur: $base-line-height*1.5;
+$default-box-shadow-spread: $base-line-height/8;
+$default-box-shadow-color: rgba($base-color, 0.40);
+
+// ### text-shadow() mixin ###
+$default-text-shadow-h-offset:  3px;
+$default-text-shadow-v-offset:  3px;
+$default-text-shadow-blur:      6px;
+$default-text-shadow-spread:    false;
+$default-text-shadow-color:     rgba($base-color, 0.50);

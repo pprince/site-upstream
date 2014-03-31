@@ -1,0 +1,6 @@
+.multi-line-button {
+    @include multi-line-button;
+}
+.multi-line-button-green {
+    @include multi-line-button(green);
+}

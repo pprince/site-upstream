@@ -1,0 +1,157 @@
+@import "variables/**/*";
+
+@import "compass";
+@import "susy";
+//@import "breakpoint";
+//@import "garnish";
+
+$keyboard-color: #ddd;
+$key-color: #ddf;
+
+$key-padding: 0.5em; 
+$key-margin: 5%;
+
+$keyboard-columns: 23;
+$keyboard-rows: 7;
+
+$grid: (
+    columns: $keyboard-columns,
+    gutters: 0
+);
+
+.level1, .level2, .level3, .level4 {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+}
+.level1 {
+    left: 0;
+    bottom: 0;
+}
+.level2 {
+    left: 0;
+    top: 0;
+}
+.level3 {
+    right: 0;
+    bottom: 0;
+}
+.level4 {
+    right: 0;
+    top: 0;
+}
+
+
+.keycap {
+    position: absolute;
+    background-color: $key-color;
+    left: $key-margin;
+    right: $key-margin;
+    top: $key-margin;
+    bottom: $key-margin;
+    padding: $key-padding;
+    @include border-radius(10%);
+    @include box-shadow(
+        rgba(black, 0.08) 0 0 1.2em 0.2em inset,
+        rgba(black, 0.08) 0 0 0.6em 0
+    );
+    border-style: solid;
+    border-width: 0.8em 1em 1.2em 1em;
+    border-top-color: rgba(black, 0.08);
+    border-right-color: rgba(black, 0.04);
+    border-bottom-color: rgba(white, 0.10);
+    border-left-color: rgba(white, 0.04);
+
+    span, .span {
+        font-size: 90%;
+    }
+}
+
+figure {
+    padding: 50px;
+}
+
+@include with-layout($grid) {
+
+    .keyboard {
+        font-size: 70%;
+        line-height: 1;
+        position: relative;
+
+        &:before {
+            content: "";
+            display: block;
+            padding-top: $keyboard_rows/$keyboard_columns * 100%;
+        }
+
+        background-color: $keyboard-color;
+        .led {
+            background-color: #cfc;
+        }
+
+        .grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            .row {
+                @include container;
+                height: percentage(1/$keyboard-rows);
+
+                .key,
+                .spacer,
+                .led,
+                {
+                    position: relative;
+
+                    &:first-child {
+                        @include first;
+                    }
+                    &:last-child {
+                        @include last;
+                    }
+
+                    @include span(1);
+                    &.half-wide {
+                        @include span(0.5);
+                    }
+                    &.wide-1 {
+                        @include span(1.25);
+                    }
+                    &.wide-2 {
+                        @include span(1.5);
+                    }
+                    &.wide-3 {
+                        @include span(1.75);
+                    }
+                    &.wide-4 {
+                        @include span(2);
+                    }
+                    &.wide-5 {
+                        @include span(2.25);
+                    }
+                    &.wide-7 {
+                        @include span(2.75);
+                    }
+                    &.spacebar {
+                        @include span(5.75);
+                    }
+                    &.full {
+                        @include full;
+                    }
+
+                    height: 100%;
+                    &.double-tall {
+                        height: 200%;
+                    }
+
+                    &.stepped {
+                        border-right-width: 1/2 * span(1);
+                    }
+                }
+            }
+        }
+    }
+}

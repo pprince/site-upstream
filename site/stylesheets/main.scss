@@ -1,0 +1,115 @@
+// main.scss
+// =========
+
+// This is the *site-wide* stylesheet, included on every page.
+// Compass will compile it into `/css/main.css`.
+
+// It is more efficient to put everything in this one file (main.css) than to
+// have the client download many little files.
+
+// This file is where we can pull in partials etc. that generate CSS output code.
+
+
+// Import Global Configuration/Settings Variables
+// ----------------------------------------------
+// this, however, mustn't generate any CSS code
+@import "variables/**/*";
+
+
+// Compass Extensions (ruby gems)
+// ------------------------------
+// Note: This list should be synchronized with the ones in the Gemfile and Gruntfile.
+
+// Note: These are specified in this order (compass, breakpoint, susy) on purpose.
+@import "compass";
+@import "breakpoint";
+@import "susy";
+
+// why does importing compass not import this??
+@import "compass/css3/selection";
+
+@import "scut";
+@import "sassy-buttons";
+
+
+// Pure SASS Modules
+// -----------------
+
+// this one is plain sass; no gem made available.
+@import "garnish";
+
+
+// Our Own SASS Modules
+// --------------------
+@import "bluebox";
+@import "alpha-me";
+@import "noisy-uris";
+@import "iconfonts";
+
+
+// Fonts
+// -----
+
+// ### Google Web Fonts ###
+// This will generate only a corresponding @import statement in the output CSS.
+@import url('http://fonts.googleapis.com' + $google-fonts-uri);
+
+// ### Icon Fonts ###
+@font-face {
+    font-family: 'icomoon';
+    src:url('/fonts/icomoon.eot');
+    src:url('/fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+            url('/fonts/icomoon.woff') format('woff'),
+            url('/fonts/icomoon.ttf') format('truetype'),
+            url('/fonts/icomoon.svg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'et-line';
+    src:url('/fonts/et-line.eot');
+    src:url('/fonts/et-line.eot?#iefix') format('embedded-opentype'),
+            url('/fonts/et-line.woff') format('woff'),
+            url('/fonts/et-line.ttf') format('truetype'),
+            url('/fonts/et-line.svg#et-line') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+// Reset or Normalize
+// ------------------
+//
+// Choose to `@import` either `compass/reset`, or `normalize`, but not both.
+//
+// Either of these will generate a moderate amount of CSS code.
+//
+//@import "normalize";
+@import "compass/reset";
+
+
+// set box-sizing model, globally
+// (provided by Susy)
+@include global-box-sizing;
+
+
+// establish vertical rhythym, a.k.a baseline grid
+// (provided by Compass)
+@include establish-baseline;
+
+
+// BlueBox Includes
+// ----------------
+//
+// These are parts of BlueBox that output CSS.
+@include aspect-ratio-classes;
+
+
+// Our Partials
+// ------------
+
+// These are the files with the little bits and pieces of our `main.css`.
+
+@import "./partials/_*";
+
+

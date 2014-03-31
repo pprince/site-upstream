@@ -1,0 +1,7 @@
+#{ $selector-page-banner } h1
+{
+    color: $base-color;
+    @include adjust-font-size-to(400%);
+    @include outline-text(white);
+    @include rhythm-margins;
+}

@@ -1,0 +1,15 @@
+// Note: A page will either implement markup for sticky-footer, or for
+// page-wrap; at this time, I have not found an acceptable way to have both.
+// FIXME:  The search for a better sticky footer technique is ongoing.
+$selector-sticky-footer-wrap:   '.sticky-footer-wrap';
+$selector-sticky-footer-push:   '.sticky-footer-push';
+$selector-sticky-footer-foot:   '.sticky-footer';
+$selector-page-wrap:            '.page-wrap';
+
+// These 4 page parts are almost always well-represented in markup:
+$selector-page-banner:  'header[role=banner]';
+$selector-page-middle:  '.inner-wrap'; // middle WRAPS AROUND all between page header and footer
+$selector-main-content: 'main';
+$selector-page-navbar:  'nav[role=navigation]';
+$selector-page-sidebar: 'main + aside';
+$selector-page-footer:  'footer[role=contentinfo]';

@@ -1,0 +1,21 @@
+@include breakpoint($breakpoint-medium) {
+    .col-container {
+        @include container;
+    }
+
+    .col-1-of-4 {
+        @include span(1 of 4 gutters 1/8);
+    }
+
+    .col-1-of-2 {
+        @include span(1 of 2 gutters 1/16);
+    }
+
+    .col-first {
+        @include first;
+    }
+
+    .col-last {
+        @include last;
+    }
+}

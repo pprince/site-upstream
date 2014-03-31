@@ -1,0 +1,8 @@
+@mixin fade-hr($color: #222, $height: 1px) {
+    border: none;
+    height: $height;
+    @include background(
+        linear-gradient(to right, transparent, $color, transparent)
+    );
+    margin-top: -1px;
+}

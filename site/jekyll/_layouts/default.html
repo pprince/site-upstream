@@ -1,0 +1,39 @@
+---
+layout: base
+---
+<div class="sticky-footer-wrap">
+
+
+    <header role="banner">
+        {% include site_banner.html %}
+    </header>
+
+
+    <div class="inner-wrap">
+
+
+        <nav role="navigation">
+            {% include main_navigation.html %}
+        </nav>
+
+
+        <main>
+            {{ content }}
+        </main>
+
+
+        <aside>
+            {% include default_sidebar.html %}
+        </aside>
+
+
+    </div>
+
+
+    <div class="sticky-footer-push"></div>
+</div>
+
+
+<footer role="contentinfo" class="sticky-footer">
+    {% include site_footer.html %}
+</footer>

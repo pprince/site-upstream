@@ -1,0 +1,10 @@
+// Styling the Selection
+// ---------------------
+
+// Here we set reasonable defaults for the fore- and background color of
+// selected text, and remove shadows etc. that can interfere with copy/paste.
+* {
+    @include selection(#5af, #fff) {
+        text-shadow: none;
+    }
+}

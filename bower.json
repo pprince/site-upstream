@@ -1,0 +1,21 @@
+{
+  "name": "littleblue-site",
+  "version": "0.10.0",
+  "private": true,
+  "main": [
+    "htdocs/index.html"
+  ],
+  "ignore": [
+    "**/*"
+  ],
+  "exportsOverride": {
+    "*": {}
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jquery": "~2.1.0",
+    "garnish": "~0.2.0",
+    "icomoon": "~0.0.1",
+    "etlinefont-bower": "~1.0.1"
+  }
+}

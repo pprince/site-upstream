@@ -1,0 +1,113 @@
+@import "compass/layout/sticky-footer";
+
+@include with-layout(12) {
+
+    // BASE
+    // ====
+
+    // X-SMALL and up
+    // -------
+    //
+    // Is the default, defines the base that is overridden later above certain widths (breakpoints).
+    // e.g., smaller/portrait phones, ie6 unless you specify a fallback, ...
+
+    #{ $selector-sticky-footer-wrap },
+    #{ $selector-sticky-footer-foot }, 
+    #{ $selector-page-wrap },
+    {
+        @include container(1600px);
+    }
+
+    #{$selector-page-footer} {
+        text-align: center;
+    }
+
+    #{ $selector-page-banner }
+    {
+        @include span(full);
+        text-align: center;
+    }
+
+    #{$selector-page-middle} {
+        @include span(full nest);
+    }
+
+    #{$selector-main-content},
+    #{$selector-page-sidebar} {
+        @include span(full);
+        @include margin-trailer;
+        padding: $base-line-height/2 $base-line-height;
+    }
+
+    #{$selector-sticky-footer-foot} {
+        @include rhythm-padding();
+    }
+
+    // OVERRIDES
+    // =========
+
+
+    // SMALL and up
+    // -----
+
+    // e.g., larger/landscape phones, smaller tablets
+    @include breakpoint ($breakpoint-small) {
+        body {
+            @include padding-h($base-line-height/2);
+        }
+
+        #{$selector-main-content} {
+            @include border-radius;
+            @include box-shadow();
+        }
+
+        #{ $selector-page-middle } {
+            @include border-radius;
+            @include box-shadow;
+        }
+    }
+
+
+    // MEDIUM and up
+    // ------
+
+    // e.g., smaller desktops, larger tablets
+    // TWO COLUMNS
+    @include breakpoint ($breakpoint-medium) {
+        #{$selector-main-content} {
+            @include span(first 8);
+        }
+        #{$selector-page-sidebar} {
+            @include span(last 4);
+        }
+        body {
+            @include padding-h($base-line-height);
+        }
+        #{ $selector-page-middle } {
+            @include padding-h(gutter());
+        }
+        @include sticky-footer(
+            $sticky-footer-height,
+            $selector-sticky-footer-wrap,
+            $selector-sticky-footer-push,
+            $selector-sticky-footer-foot
+        );
+    }
+
+
+    // LARGE and up
+    // -----
+
+    // medium desktops
+    @include breakpoint ($breakpoint-large, '.no-mq') {
+    }
+
+
+    // X-LARGE and up
+    // -------
+
+    // larger desktops
+    // (Not needed for this design.)
+    @include breakpoint ($breakpoint-x-large) {
+    }
+}

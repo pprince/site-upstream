@@ -1,0 +1,39 @@
+$default-shadow: compact($default-text-shadow-h-offset $default-text-shadow-v-offset $default-text-shadow-blur $default-text-shadow-spread $default-text-shadow-color);
+
+@mixin outline-text ( $color: #eee, $add-default-shadow: false, $size: 1px) {
+    @if $size == 1 {
+        @include outline-text-1($color, $add-default-shadow);
+    } @else {
+        @include outline-text-2($color, $add-default-shadow, $size);
+    }
+}
+
+@mixin outline-text-1 ( $color: #eee, $add-default-shadow: false, $size: 1px) {
+    $shadow:
+        (-$size)    (-$size)    $color,
+        (-$size)    $size       $color,
+        $size       (-$size)    $color,
+        $size       $size       $color;
+
+    @if $add-default-shadow {
+        $shadow: append($shadow, $default-shadow, comma);
+    }
+    @include text-shadow( $shadow );
+}
+
+@mixin outline-text-2 ( $color: #eee, $add-default-shadow: false, $size: 2px) {
+    $shadow:
+        (-$size)    (-$size)    $color,
+        (-$size)    $size       $color,
+        $size       (-$size)    $color,
+        $size       $size       $color,
+        0px         (-$size)    $color,
+        0px         $size       $color,
+        (-$size)    0px         $color,
+        $size       0px         $color;
+
+    @if $add-default-shadow {
+        $shadow: append($shadow, $default-shadow, comma);
+    }
+    @include text-shadow( $shadow );
+}

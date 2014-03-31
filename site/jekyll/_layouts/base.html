@@ -1,0 +1,54 @@
+---
+---
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>{{ site.name }} - {{ page.title }}</title>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        {% if site.data.css %}
+            {% for cssfile in site.data.css.files %}
+                <link rel="stylesheet" href="{{ cssfile }}">
+            {% endfor %}
+        {% endif %}
+
+
+        {% if page.css %}
+            {% for cssfile in page.css.files %}
+                <link rel="stylesheet" href="{{ cssfile }}">
+            {% endfor %}
+        {% endif %}
+
+
+    </head>
+
+    <body>
+
+
+        {{ content }}
+
+
+        {% if site.data.js %}
+            {% for jsfile in site.data.js.files %}
+                <script src="{{ jsfile }}" type="text/javascript"></script>
+            {% endfor %}
+        {% endif %}
+
+
+        {% if page.js %}
+            {% for jsfile in page.js.files %}
+                <script src="{{ jsfile }}" type="text/javascript"></script>
+            {% endfor %}
+        {% endif %}
+
+
+    </body>
+
+</html>

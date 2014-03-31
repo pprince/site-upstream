@@ -1,0 +1,18 @@
+// Breakpoints
+// -----------
+//
+// a.k.a Responsive Layout.
+//
+// These define the key browser widths where we will make layout changes.
+//
+// We do "mobile first" design.  Whatever styles are specified apply to the
+// smallest screen size.  Then, our default styles are overriden for each wider
+// screen size in `_respond.scss`.
+//
+// Susy will detect and integrate with Breakpoint, so we need to import
+// Breakpoint before Susy.
+//
+$breakpoint-small:    444px; // transition point from x-small to small
+$breakpoint-medium:   777px; // transition point from small to medium
+$breakpoint-large:    999px; // etc. etc.
+$breakpoint-x-large: 1222px;

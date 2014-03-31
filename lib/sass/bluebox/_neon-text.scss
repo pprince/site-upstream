@@ -1,0 +1,13 @@
+@mixin neon-text ($color: orange, $size: 150px, $start-color: white) {
+    color: $start-color;
+    @include text-shadow(
+        0  0  $size*(1/8)  $start-color,
+        0  0  $size*(2/8)  $start-color,
+        0  0  $size*(3/8)  mix($start-color, $color, 97%),
+        0  0  $size*(4/8)  mix($start-color, $color, 95%),
+        0  0  $size*(5/8)  mix($start-color, $color, 10%),
+        0  0  $size*(6/8)  mix($start-color, $color, 5%),
+        0  0  $size*(7/8)  mix($start-color, $color, 3%),
+        0  0  $size        $color
+    );
+}

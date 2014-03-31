@@ -1,0 +1,35 @@
+#{ $selector-page-navbar } {
+    font-weight: bold;
+    text-align: center;
+    @include rhythm-margins(0.25);
+    @include full;
+    ul {
+        @include inline-block-list();
+        li {
+            a {
+                display: block;
+                padding: 0 0.6em;
+                @include adjust-font-size-to(122%, 2);
+                @include border-radius($base-line-height);
+                &:hover {
+                    background: rgba(white, 0.20);
+                    text-decoration: none;
+                }
+                &:hover[href="#"], &:hover.current {
+                    background: transparent;
+                }
+            }
+            h1 {
+                display: none;
+            }
+
+            a[href='/'] {
+                @include icon('home-3');
+            }
+            a[href='/companion'] {
+                @include icon('rocket');
+            }
+
+        }
+    }
+}

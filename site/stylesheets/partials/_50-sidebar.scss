@@ -1,0 +1,21 @@
+#{ $selector-page-sidebar } .sidebar-box {
+    @include alpha-me('background-color', rgba(white, 0.10), shade($base-color, 50%));
+    padding: 0 1em;
+    @include margin-trailer(1.5);
+    @include padding-trailer(0.5);
+}
+
+#{ $selector-page-sidebar } h1,
+#{ $selector-page-sidebar } h2,
+#{ $selector-page-sidebar } h3,
+#{ $selector-page-sidebar } h4,
+#{ $selector-page-sidebar } h5,
+#{ $selector-page-sidebar } h6 {
+    @include margin-v(0);
+}
+
+
+#{ $selector-page-sidebar } .vcard {
+    @extend %small;
+    margin-left: 1em;
+}

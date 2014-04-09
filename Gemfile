@@ -14,7 +14,7 @@ source "https://rubygems.org"
 # Version 1.4.3 has a bug on windows-only that will not be patched until next version.
 # Version 2.0.0.alpha has problems running under grunt-jekyll
 # So, we use version:
-gem "jekyll", "=1.5.0"
+gem "jekyll", "=1.5.1"
 
 
 # Jekyll Plugins

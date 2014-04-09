@@ -1,0 +1,24 @@
+@include with-layout(4 1/8) {
+
+    .four-columns {
+        @include container(100%);
+    }
+
+    .four-columns .column {
+        @include span(full);
+    }
+
+    @include breakpoint($breakpoint-small) {
+        .four-columns .column {
+            @include gallery(2);
+            
+        }
+    }
+
+    @include breakpoint($breakpoint-large) {
+        .four-columns .column {
+            @include gallery(1);
+        }
+    }
+
+}

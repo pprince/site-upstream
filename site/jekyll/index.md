@@ -7,24 +7,24 @@ name: companion
 {{ page.title }}
 =====
 
-<div class="col-container">
+<div class="four-columns">
 
-<div class="col-1-of-4 col-first">
+<div class="column">
   * [Dungeon Guides](dungeons/)
   * [Raid Guides](raids/)
 </div>
 
-<div class="col-1-of-4">
+<div class="column">
   * [Healer Guides](healer/)
   * [Tank Guides](tanks/)
 </div>
 
-<div class="col-1-of-4">
+<div class="column">
   * [Crafting Guides](crafting/)
   * [PvP Guides](pvp/)
 </div>
 
-<div class="col-1-of-4 col-last">
+<div class="column">
   * [Basic Gameplay Tips](basic/)
   * [Advanced Gameplay Tips](advanced/)
 </div>

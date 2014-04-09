@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Wildstar Companion App (BETA)
-name: companion
+name: home
 ---
 
 {{ page.title }}

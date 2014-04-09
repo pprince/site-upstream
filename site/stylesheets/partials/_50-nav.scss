@@ -26,9 +26,6 @@
             a[href='/'] {
                 @include icon('home-3');
             }
-            a[href='/companion'] {
-                @include icon('rocket');
-            }
 
         }
     }

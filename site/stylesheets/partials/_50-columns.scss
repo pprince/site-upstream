@@ -1,7 +1,7 @@
 @include with-layout(4 1/8) {
 
     .four-columns {
-        @include container(100%);
+        @include container(100% show-columns);
     }
 
     .four-columns .column {

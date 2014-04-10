@@ -6,3 +6,8 @@ $twitchy-red:               hsl(351, 100%, 31%);
 
 $base-color:                $little-blue;
 $link-color:                tint($base-color, 30%);
+
+$notebox-color-note:        $little-blue;
+$notebox-color-tip:         tint(green, 15%);
+$notebox-color-caution:     shade(orange, 7%);
+$notebox-color-danger:      shade(red, 20%);

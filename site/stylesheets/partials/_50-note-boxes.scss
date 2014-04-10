@@ -1,0 +1,36 @@
+%note {
+    padding-bottom: 0.2em;
+    &>h1:first-child {
+        @include adjust-font-size-to(130%, 1.5);
+        @include icon(false) {
+            vertical-align: -10%;
+            margin: 0 0.4em;
+        }
+    }
+    p {
+        @include padding-h(0.75em);
+        color: #111;
+    }
+}
+
+@mixin note ($color: #ddd, $icon: false) {
+    @extend %note;
+    background-color: tint($color, 70%);
+    &>h1:first-child {
+        background-color: $color;
+        @include icon($icon, false);
+    }
+}
+
+.note {
+    @include note($notebox-color-note, 'info');
+}
+.tip {
+    @include note($notebox-color-tip, 'wink');
+}
+.caution {
+    @include note($notebox-color-caution, 'warning');
+}
+.danger {
+    @include note($notebox-color-danger, 'spam');
+}

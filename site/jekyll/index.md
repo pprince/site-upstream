@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Wildstar Companion App (BETA)
+title: Home Page
 name: home
 ---
 
-{{ page.title }}
-=====
+Guides
+======
 
 <div class="four-columns">
 

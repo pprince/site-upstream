@@ -56,14 +56,11 @@
             @include padding-h($base-line-height/2);
         }
 
-        #{$selector-main-content} {
+        #{$selector-main-content},
+        #{$selector-page-sidebar},
+        #{$selector-page-navbar} {
             @include border-radius;
             @include box-shadow();
-        }
-
-        #{ $selector-page-middle } {
-            @include border-radius;
-            @include box-shadow;
         }
     }
 

@@ -1,7 +1,7 @@
 #{ $selector-page-navbar } {
     font-weight: bold;
     text-align: center;
-    @include rhythm-margins(0.25);
+    @include margin-trailer;
     @include full;
     ul {
         @include inline-block-list();

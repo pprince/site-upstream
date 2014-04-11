@@ -10,10 +10,8 @@ html {
     );
 }
 
-#{$selector-page-middle} {
-    @include alpha-me(background-color, rgba(black, 0.50), $base-color);
-}
-
+#{$selector-page-navbar},
+#{$selector-page-sidebar},
 #{$selector-main-content} {
-    @include alpha-me(background-color, rgba(black, 0.40), $base-color);
+    @include alpha-me(background-color, rgba(black, 0.70), $base-color);
 }

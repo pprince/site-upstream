@@ -150,11 +150,6 @@ module.exports = (grunt) ->
             jquery:
               path: 'lib/bower/js/jquery/jquery.js'
               exports: '$'
-            'jquery.starscroll':
-              path: 'lib/js/starscroll/starscroll.js'
-              exports: null
-              depends:
-                jquery: 'jQuery'
       dev:
         src: ['site/js/*.{js,coffee}']
         dest: 'BUILD/development/js/main-bundle.js'

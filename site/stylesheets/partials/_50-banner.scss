@@ -1,12 +1,12 @@
 #{ $selector-page-banner } h1
 {
     color: $base-color;
-    @include adjust-font-size-to(300%);
-    @include outline-text(white);
+    @include adjust-font-size-to(64px, 3);
+    @include outline-text(#eee);
     @include rhythm-margins;
 
-    @include icon($icon: rocket, $position: after) {
-        margin-left: 0.25em;
-        vertical-align: -10%;
+    @include icon(rocket) {
+        color: #eee;
+        margin-right: 0.3em;
     }
 }
